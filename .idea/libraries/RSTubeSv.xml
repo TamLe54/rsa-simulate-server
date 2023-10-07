@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RSTubeSv">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/RSTubeSv.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
