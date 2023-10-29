@@ -1,4 +1,3 @@
-// const { error } = require('console')
 const supabase = require('../config')
 const crypto = require('crypto')
 const hasString = require('../util/hashString')
@@ -6,7 +5,6 @@ const encryption = require('../util/encrypt')
 const decryption = require('../util/decrypt')
 const { MODULE_LENGTH } = require('../constants')
 const bufferHandle = require('../util/bufferHandle')
-// const getBitLength = require('../util/getBitLength')
 
 class RSAController {
   generateKey(req, res, next) {

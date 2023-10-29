@@ -5,6 +5,7 @@ const route = require('./routes/index.route')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const PORT = process.env.PORT || 5000
+const supabase = require('./app/config/index')
 
 app.use(bodyParser.json())
 app.use(express.json())
@@ -12,9 +13,14 @@ app.use(cors())
 
 route(app)
 
-// Initialize the client with your Supabase URL and anon key
+// check database
+supabase.from('RSA_Account').select('*').then(()=>{
+  console.log("Connect to database successfully")
+}).catch((error)=>{
+  console.log("There is problem when connecting to database", error)
+})
 
-//Chạy server ở cổng 3001
+//run server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 })
